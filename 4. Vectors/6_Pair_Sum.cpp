@@ -69,8 +69,12 @@ vector<int> twoSum2(vector<int> &nums, int target)
     {
         int x = nums[i];
         int y = target - x;
-        if (umap.find(y) != umap.end())
-            return {i, umap[y]}; // Return indices of x of y.
+        if (umap.find(y) == umap.end())
+            continue;
+        else if ((umap.find(y) != umap.end()) && (umap[y] != i)) // Index of x and y can't be same.
+            return {i, umap[y]};                                 // Return indices of x of y.
+        else
+            continue;
     }
     return {-1, -1};
 }
@@ -120,6 +124,7 @@ vector<int> twoSum3(vector<int> &nums, int target)
 
 
 
+
 int main()
 {
     vector<int> nums = {11, 4, 6, 5, 8, 9, 3};
@@ -128,11 +133,11 @@ int main()
     // vector<int> ans1 = twoSum1(nums, target);
     // print(ans1, ans1.size());
 
-    // vector<int> ans2 = twoSum2(nums, target);
-    // print(ans2, ans2.size());
+    vector<int> ans2 = twoSum2(nums, target);
+    print(ans2, ans2.size());
 
-    vector<int> ans3 = twoSum3(nums, target);
-    print(ans3, ans3.size());
+    // vector<int> ans3 = twoSum3(nums, target);
+    // print(ans3, ans3.size());
 
     return 0;
 }
