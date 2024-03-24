@@ -1,14 +1,13 @@
 /**** LeetCode 33: Binary Search in Rotated & Sorted Array ****/
 
 // Time: O(log n)
-// 1. Find the pivot element. [File: DSA-Supreme/5. Searching Sorting/14_PivotElement.cpp]
+// 1. [File: DSA-Supreme/5. Searching Sorting/14_PivotElement.cpp] to find the pivot element.
 // 2. Compare target to understand in which array it is in.
 // 3. Perform binary search in that array.
 
 
 #include <bits/stdc++.h>
 using namespace std;
-
 
 int pivot(vector<int> arr)
 {
@@ -50,7 +49,6 @@ int binarySearch(vector<int> arr, int s, int e, int target)
     return -1;
 }
 
-
 int search(vector<int> &arr, int target)
 {
     int ans = 0;
@@ -67,7 +65,6 @@ int search(vector<int> &arr, int target)
 
     return ans;
 }
-
 
 int main()
 {
