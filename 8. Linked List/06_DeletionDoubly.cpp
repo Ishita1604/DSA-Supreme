@@ -91,7 +91,7 @@ void deletion(Node *&head, Node *&tail, int position)
         tail = tail->prev; // Update the tail.
         temp->prev = NULL; // Break the link.
         tail->next = NULL; // Break the link.
-        delete temp;       // Free memory by calling destructor.
+        delete temp;       // Free memory by calling the destructor.
         return;
     }
 
