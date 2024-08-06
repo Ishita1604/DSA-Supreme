@@ -25,7 +25,7 @@ public:
 
 
 // Time: O(N)
-// Spce: O(1)
+// Space: O(1)
 void print(Node *&head)
 {
     Node *temp = head;
@@ -39,7 +39,7 @@ void print(Node *&head)
 
 
 // Time: O(N)
-// Spce: O(1)
+// Space: O(1)
 int findLength(Node *&head)
 {
     int length = 0;
