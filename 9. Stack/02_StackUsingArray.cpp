@@ -3,6 +3,7 @@ using namespace std;
 
 // Implement stack class from scratch.
 // APPROACH 1: USING ARRAYS
+// APPROACH 2: USING LINKED LIST
 
 class Stack
 {
@@ -22,7 +23,7 @@ public:
     // Functions of the stack.
     void push(int data)
     {
-        if (size - top == 1) // Space not available.
+        if (top == size - 1) // Space not available.
             cout << "Stack overflow error!" << endl;
         else
         {
@@ -41,7 +42,10 @@ public:
     int getTop()
     {
         if (top == -1)
+        {
             cout << "Stack is empty" << endl;
+            return -1;
+        }
         else
             return arr[top];
     }
