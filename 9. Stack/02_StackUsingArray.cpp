@@ -63,7 +63,6 @@ public:
     }
 };
 
-
 void print(Stack st)
 {
     while (!st.isEmpty())
@@ -71,10 +70,8 @@ void print(Stack st)
         cout << st.getTop() << " ";
         st.pop();
     }
-    cout << endl
-         << endl;
+    cout << "\n\n";
 }
-
 
 int main()
 {
