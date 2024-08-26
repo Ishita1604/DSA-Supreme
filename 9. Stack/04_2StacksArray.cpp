@@ -14,10 +14,10 @@ public:
     int top1;
     int top2;
 
-    Stack(int size)
+    Stack(int size_)
     {
-        arr = new int[size];
-        this->size = size;
+        this->size = size_;
+        arr = new int[size]{0};
         top1 = -1;
         top2 = size;
     }
@@ -37,7 +37,7 @@ public:
     void push2(int data)
     {
         if (top2 - top1 == 1)
-            cout << "Stack overflow error!" << endl; // Stack is full, as both pointers are present side-by-side.
+            cout << "Stack overflow error!" << endl; // Stack is full.
         else
         {
             // Space is available.
@@ -50,25 +50,27 @@ public:
         if (top1 == -1)
             cout << "Stack underflow error!" << endl; // 1st stack is empty so can't delete elements.
         else
+        {
+            arr[top1] = 0;
             top1--;
+        }
     }
     void pop2()
     {
         if (top2 == size)
             cout << "Stack underflow error!" << endl; // 2nd stack is empty so can't delete elements.
         else
-            top2--;
+        {
+            arr[top2] = 0;
+            top2++;
+        }
     }
 
     void print() // Function to visualize the array content and stack pointers.
     {
         cout << endl;
-        cout << "Top 1: " << top1 << endl;
-        cout << "Top 2: " << top2 << endl;
         for (int i = 0; i < size; i++)
-        {
             cout << arr[i] << " ";
-        }
         cout << endl;
     }
 };
@@ -80,28 +82,27 @@ int main()
     st.print();
 
     st.push1(1);
-    st.print();
     st.push1(2);
-    st.print();
     st.push1(3);
-    st.print();
     st.push1(4);
-    st.print();
     st.push1(5);
-    st.print();
     st.push1(6);
     st.print();
 
     st.push2(10);
-    st.print();
     st.push2(20);
-    st.print();
     st.push2(30);
-    st.print();
     st.push2(40);
     st.print();
 
+    cout << "Stack must be full here\n";
     st.push2(50);
+    st.print();
+
+    st.pop1();
+    st.print();
+
+    st.pop2();
     st.print();
 
     return 0;
