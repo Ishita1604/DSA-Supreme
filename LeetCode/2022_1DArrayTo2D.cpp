@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-/********* LeetCode 2022/; Convert 1D Array Into 2D Array *********/
+/********* LeetCode 2022: Convert 1D Array Into 2D Array *********/
 // Link: [https://leetcode.com/problems/convert-1d-array-into-2d-array/?envType=daily-question&envId=2024-09-01]
 
 
