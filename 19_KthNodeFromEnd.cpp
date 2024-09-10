@@ -1,7 +1,7 @@
-// Program to find Nth node from the end of a linked list.
-
 #include <bits/stdc++.h>
 using namespace std;
+
+// Find Nth node from the end of a linked list.
 
 class Node
 {
@@ -93,8 +93,9 @@ Node *kthNode2(Node *head, int k)
 
 
 // APPROACH 3: 2 POINTER APPROACH
-// 2 pointers p1 and p2 at the beginning of LL. Already move the p2 pointer by k steps. Now move both till p2 reaches NULL.
-// p1 gives the required node.
+// 2 pointers p1 and p2 at the beginning of linked list.
+// Already move the p2 pointer by k steps. Now move both till p2 reaches NULL.
+// Pointer p1 gives the required node.
 
 // Time: O(N), but in a single pass itself.
 // Space: O(1)
