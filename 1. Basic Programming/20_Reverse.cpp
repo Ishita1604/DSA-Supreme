@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// Reverse the digits of the number.
+// Reverse the digits of given number.
 
 int main()
 {
