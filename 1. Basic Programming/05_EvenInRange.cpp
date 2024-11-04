@@ -1,4 +1,4 @@
-// Find even numbers in [a, b] range.
+// Find even numbers in the range [a, b].
 #include <iostream>
 using namespace std;
 
