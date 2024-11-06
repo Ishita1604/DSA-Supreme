@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// Check if Number from 1 to N is/are Prime or Not Prime.
+// Check if Number(s) from 1 to N is/are Prime or Not Prime.
 
 
 int prime(int N)
